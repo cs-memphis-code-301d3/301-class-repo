@@ -1,44 +1,70 @@
-# Deploy and Extend Your Portfolio
+# Getting Started with Create React App
 
-## Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Get ready to take a look at a full-featured code base! You have just started a new job and the employer wants you to demonstrate your skills by building a portfolio using React.  This should highlight your knowledge of the React library and your ability to explore a new codebase.  [The starter code](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"} for today contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code by following the specifications in the Trello board.
+## Available Scripts
 
-You will be deploying your React portfolio to [Netlify](https://www.netlify.com/){:target="_blank"}.
+In the project directory, you can run:
 
-## Workflow
+### `npm start`
 
-- We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for this lab.
-- To maximize your experience with Trello, you should create a free Trello account by clicking on the `Sign Up` button.
-- After creating an account, go to the [Portfolio](https://trello.com/b/BgFVrZ6W/portfolio){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
-- This Trello board contains all of the features required to complete this lab assignment.
-- Review the user stories and analyze the feature requests and requirements in the lab.
-- Within each story, note the the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
-- Throughout the lab time, check off tasks as you complete them, and move the story cards through the workflow.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Time Estimate
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-For each of the main features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+### `npm test`
 
-```md
-Number and name of feature: ________________________________
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Estimate of time needed to complete: _____
+### `npm run build`
 
-Start time: _____
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Finish time: _____
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Actual time needed to complete: _____
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Submission Instructions
+### `npm run eject`
 
-1. Complete your Feature Tasks for the lab on a branch.
-1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
-1. Ensure your most recent code deployment was successful, so your latest code is published live via Netlify.
-1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
-    - A link to the deployed version of your latest code.
-    - A question within the context of today's lab assignment
-    - An observation about the lab assignment, or related 'Ah-hah!' moment
-    - How long you spent working on this assignment
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
