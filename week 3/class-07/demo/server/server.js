@@ -8,8 +8,6 @@ const app = express();
 
 app.use(cors());
 
-const PORT = process.env.PORT || 3001;
-
 const myTargetList = ['shoes', 'bags', 'games', 'cleaning supples'];
 
 app.get('/', (request, response) => {
@@ -28,4 +26,5 @@ app.get('*', (request, response) => {
   response.status(404).send('not found');
 });
 
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
