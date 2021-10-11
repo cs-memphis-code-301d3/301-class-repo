@@ -6,8 +6,15 @@ import LogoutButton from './components/LogoutButton';
 function App() {
   return (
     <div>
-      <LoginButton/>      
+      <LoginButton />
+      <LogoutButton />
       {/* If the user as logged in, display some user info stuff */}
+      {this.props.auth0.isAuthenticated &&
+        <>
+          <Profile />
+          <Content />
+        </>
+      }
     </div>
   );
 }

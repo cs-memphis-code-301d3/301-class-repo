@@ -3,17 +3,19 @@ import { withAuth0 } from '@auth0/auth0-react'; // use 'with' class based compon
 
 class LogoutButton extends Component {
     render() {
+        // get the auth0 properties that we need (provided to us by auth0)
         const {
             isAuthenticated,
             logout
         } = this.props.auth0;
 
+        // If user IS already authenticated, display the Logout button
         return isAuthenticated && (
             <button onClick={() => {
                 logout({ returnTo: window.location.origin });
-            }}>Log out</button>
+            }}>Logout</button>
         );
     }
 }
-
+// Since this component uses auth0 we need to wrap our export with withAuth0()
 export default withAuth0(LogoutButton);
