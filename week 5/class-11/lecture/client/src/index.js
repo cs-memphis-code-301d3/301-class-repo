@@ -6,11 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import {Auth0Provider} from '@auth0/auth0-react';
 
 ReactDOM.render(
+  // <Auth0Provider
+  //   domain="dev-c23tlbbe.us.auth0.com"
+  //   clientId="VDWDHI5pl9vnZvHTHOgGlCcr7BHtHm7s"
+  //   redirectUri="http://localhost:3000"
+  //   audience="APITest301"
+  // >
   <Auth0Provider
     domain="dev-c23tlbbe.us.auth0.com"
-    clientId="VDWDHI5pl9vnZvHTHOgGlCcr7BHtHm7s"
+    clientId="YxLBGLDOpGziGtaxTLfIQM2Xz7SsacWG"
     redirectUri="http://localhost:3000"
-  >
+    audience="APITest301"
+  >  
     <App />
   </Auth0Provider>,
   document.getElementById("root")

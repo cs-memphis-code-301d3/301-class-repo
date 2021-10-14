@@ -14,7 +14,7 @@ class Content extends React.Component {
           headers: {"Authorization" : `Bearer ${jwt}`},
           method: 'get',
           baseURL: 'http://localhost:3001',
-          url: '/test'
+          url: '/api/private'
         }
         axios(config)
           .then(axiosResults => console.log(axiosResults.data))
