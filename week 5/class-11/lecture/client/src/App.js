@@ -17,7 +17,7 @@ class App extends React.Component {
         {this.props.auth0.isAuthenticated &&
           <>
             <Profile />
-            <Content />
+            {/* <Content /> */}
           </>
         }
       </>

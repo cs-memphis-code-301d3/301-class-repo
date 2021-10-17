@@ -8,7 +8,8 @@ class LoginButton extends Component {
             loginWithRedirect,
             isAuthenticated
         } = this.props.auth0;
-
+        console.log(`Props: ${this.props.auth0}`);
+        
         // If user already athenticated, dont display the Login button
         return !isAuthenticated && (
             <button onClick={loginWithRedirect}>Login</button>

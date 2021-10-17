@@ -12,11 +12,11 @@ ReactDOM.render(
   //   redirectUri="http://localhost:3000"
   //   audience="APITest301"
   // >
+
   <Auth0Provider
     domain="dev-c23tlbbe.us.auth0.com"
-    clientId="YxLBGLDOpGziGtaxTLfIQM2Xz7SsacWG"
-    redirectUri="http://localhost:3000"
-    audience="APITest301"
+    clientId="8bIVVaUg03OyixV7LciOl1wFdgZ86awG"
+    redirectUri="http://localhost:3001/callback"
   >  
     <App />
   </Auth0Provider>,
