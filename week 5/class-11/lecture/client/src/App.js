@@ -14,12 +14,12 @@ class App extends React.Component {
         <LoginButton />
         <LogoutButton />
         {/* If the user as logged in, display some user info stuff */}
-        {this.props.auth0.isAuthenticated &&
+        {/*this.props.auth0.isAuthenticated &&
           <>
             <Profile />
-            {/* <Content /> */}
+            <Content />
           </>
-        }
+        */}
       </>
     )
   }
