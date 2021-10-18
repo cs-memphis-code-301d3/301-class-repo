@@ -19,33 +19,44 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Auth stuff
+// environment vars
+require('dotenv').config();
 
+// Auth stuff
 const { auth } = require('express-openid-connect');
 
+// Get config test hardcoded then refactor with .dotenv https://www.freecodecamp.org/news/how-to-use-node-environment-variables-with-a-dotenv-file-for-node-js-and-npm/
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://localhost:3001',
-  clientID: 'lK3IBt57WAi7GwVUq5b7vULBuhcWLn69',
-  issuerBaseURL: 'https://dev-c23tlbbe.us.auth0.com'
+  // secret: 'm9FCAh80J9dGmuPYVuC2UWrrIRfZ5YWUgW5eO8xdCxChBqvaF6IW12Tpjbad1FiSqPTCwTTPc6EMgcZPnZKkb2qRxGu83cIJ0596',
+  // baseURL: 'http://localhost:3001',
+  // clientID: 'lK3IBt57WAi7GwVUq5b7vULBuhcWLn69',
+  // issuerBaseURL: 'https://dev-c23tlbbe.us.auth0.com'
+  secret: process.env.SECRET,
+  baseURL: process.env.BASEURL,
+  clientID: process.env.CLIENTID,
+  issuerBaseURL: process.env.ISSUER
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
+// Endpoint that doesnt require authentication
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
+// Pull in reference to openid-connect
 const { requiresAuth } = require('express-openid-connect');
 
+// secured endpoint requiring authentication
 app.get('/content', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
 
+// TODO: Use these routes later
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
@@ -54,7 +65,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// generic error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
