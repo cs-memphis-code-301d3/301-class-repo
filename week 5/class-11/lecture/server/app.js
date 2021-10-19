@@ -29,10 +29,14 @@ const { auth } = require('express-openid-connect');
 const config = {
   authRequired: false,
   auth0Logout: true,
+  
+  // Test hardcoded values first
   // secret: 'm9FCAh80J9dGmuPYVuC2UWrrIRfZ5YWUgW5eO8xdCxChBqvaF6IW12Tpjbad1FiSqPTCwTTPc6EMgcZPnZKkb2qRxGu83cIJ0596',
   // baseURL: 'http://localhost:3001',
   // clientID: 'lK3IBt57WAi7GwVUq5b7vULBuhcWLn69',
   // issuerBaseURL: 'https://dev-c23tlbbe.us.auth0.com'
+
+  // Use environment variables for sensitive information
   secret: process.env.SECRET,
   baseURL: process.env.BASEURL,
   clientID: process.env.CLIENTID,

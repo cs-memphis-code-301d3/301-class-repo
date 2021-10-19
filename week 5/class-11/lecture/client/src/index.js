@@ -13,10 +13,11 @@ ReactDOM.render(
   //   audience="APITest301"
   // >
 
+
   <Auth0Provider
-    domain="dev-c23tlbbe.us.auth0.com"
-    clientId="lK3IBt57WAi7GwVUq5b7vULBuhcWLn69"
-    redirectUri="http://localhost:3000"
+    domain={process.env.REACT_APP_AUTH0_DOMAIN}
+    clientId={process.env.REACT_APP_AUTH0_DOMAIN}
+    redirectUri={window.location.origin}
   >  
     <App />
   </Auth0Provider>,
